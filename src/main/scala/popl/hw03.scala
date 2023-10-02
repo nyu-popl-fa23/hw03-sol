@@ -43,7 +43,7 @@ object hw03 extends App:
   def filter(n: Int, l: List): List =
     def loop(l: List, r: List): List = l match
       case Nil => reverse(r)
-      case hd :: tl => loop(tl, if (hd < n) r else hd :: r)
+      case hd :: tl => loop(tl, if hd < n then r else hd :: r)
     loop(l, Nil)
 
   def append(l1: List, l2: List): List =

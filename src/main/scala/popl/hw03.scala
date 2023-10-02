@@ -47,8 +47,5 @@ object hw03 extends App:
     loop(l, Nil)
 
   def append(l1: List, l2: List): List =
-    def loop(r1: List, l2: List): List = r1 match
-      case Nil => l2
-      case hd :: tl => loop(tl, hd :: l2)
-    loop(reverse(l1), l2)
+    reverseLoop(reverse(l1), l2)
 
